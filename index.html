@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- font awesome========== -->
+    <script src="https://kit.fontawesome.com/ab7368c295.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="prot.css">
+    <title>Arfan Ahmed</title>
+  </head>
+  <body>
+      <!-- navar ============================================= -->
+    <nav class="navbar navbar-expand-lg p-3 ">
+        <div class="container">
+          <a class="navbar-brand" href="#"><h1 class="n-h">Arfan Ahmed</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About  me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Resume</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Protfolio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Extra</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Get it Now</a>
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+      <!-- navbar finished========================================= -->
+      
+      <!-- header  -->
+
+<div class="container">
+    <div class="row d-flex justify-content-center m-auto pt-md-5">
+        <div class="col-md-4">
+            <img src="./p image/1630097747864.jpg" alt="" class="img-fluid clipy w-75" >
+        </div>
+        <div class="col-md-6">
+
+          <div class="ageCsec">
+            <div class="headJS">Age calculator</div>
+          
+          <div class="mainjs">
+          
+            <div class="date">
+              <p>Date</p>
+              <input type="text" id="date" required="required" minlength="1" maxlength="2">
+            </div>
+          
+            <div class="Month">
+              <p>Month</p>
+              <input type="text" id="month" required="required" minlength="1" maxlength="2">
+            </div>
+          
+          
+            <div class="Year">
+              <p>Year</p>
+              <input type="text" id="year" minlength="4" maxlength="4">
+            </div>
+           <input type="button"  value="submit" onclick=age()>
+            
+           <div id="age"></div>
+          
+          
+          </div>
+          
+          </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- js project  -->
+
+
+
+
+
+
+
+<!-- js project finished  -->
+
+
+      <!-- headert finsihed  -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <script src="js.js"></script>
+    <script>
+function age() {
+    var d1 = document.getElementById('date').value;
+
+    var m1 = document.getElementById('month').value;
+
+    var y1 = document.getElementById('year').value;
+
+    var date = new Date();
+    var d2 = date.getDate();
+    var m2 = 1 + date.getMonth();
+    var y2 = date.getFullYear();
+    
+    var month=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+if(d1 > d2){
+    d2 = d2 + month [ m2 - 1 ];
+    m2 = m2-1;
+}
+if(m1 > m2){
+    m2 = m2 + 12;
+    y2 = y2-1;
+}
+var d = d2 - d1;
+var m = m2 - m1;
+var y = y2 - y1;
+
+var ok=document.getElementById('age').innerHTML = 'Your Age is '+y+' Years '+m+' Months '+d+' Days'; 
+alert(ok)
+
+}
+
+    </script>
+  </body>
+</html>
