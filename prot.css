@@ -91,10 +91,10 @@ body{
 }
 
 .date input[type=text],.Year input[type=text],.Month input[type=text]{
-    width: 90%;
+    width: 100%;
     outline: none;
     border: none;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 20px;
 
 }
